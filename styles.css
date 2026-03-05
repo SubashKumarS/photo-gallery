@@ -1,0 +1,108 @@
+/* Reset + Body Styling */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom, lightgreen, lightblue);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 1000px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+h1 {
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Input Field */
+.input {
+    padding: 15px 10px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    width: 120px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Error Message */
+.errorMessage {
+    color: red;
+    font-weight: 600;
+    margin: 10px;
+    display: none;
+}
+
+/* Button */
+.btn {
+    text-transform: uppercase;
+    width: 250px;
+    height: 45px;
+    margin: 20px 0;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+.btn:hover {
+    background-color: green;
+}
+
+/* Gallery (Flexbox Layout) */
+.gallery {
+    display: flex;              /* Enable Flexbox */
+    flex-wrap: wrap;            /* Wrap images to next row */
+    justify-content: center;    /* Center images */
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Gallery Images */
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 600px) {
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+}
